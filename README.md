@@ -13,8 +13,6 @@ ReplayGainsayer helps music fans identify the best masters of their favorite mus
 
 Eventually, ReplayGainsayer may help fans to discover the best masters across streaming platforms and choose to listen to better music.
 
-## Development
-
 ## Staged development plan
 
 1. **Spotify prototype**
@@ -30,20 +28,44 @@ Eventually, ReplayGainsayer may help fans to discover the best masters across st
 
 ## Installation
 
-Clone the repository and install dependencies using pip:
+Clone the repository and set up a Python virtual environment so dependencies do not pollute your base system:
 
 ```bash
- git clone https://example.com/ReplayGainsayer.git
- cd ReplayGainsayer
- pip install -r requirements.txt
+git clone https://example.com/ReplayGainsayer.git
+cd ReplayGainsayer
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Spotify credentials
+
+Create an application on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) to obtain a **Client ID** and **Client Secret**. Store them in environment variables:
+
+```bash
+export SPOTIFY_CLIENT_ID=<your client id>
+export SPOTIFY_CLIENT_SECRET=<your client secret>
 ```
 
 ## Usage
 
-Run the tool with an artist name to see loudness information:
+Run the tool with an artist name, passing in the credentials from the environment:
 
 ```bash
- python -m replaygainsayer --artist "Artist Name"
+python -m replaygainsayer "Artist Name" \
+  --client-id "$SPOTIFY_CLIENT_ID" \
+  --client-secret "$SPOTIFY_CLIENT_SECRET"
+```
+
+The script `scripts/run_black_sabbath.sh` demonstrates running the program for the band **Black Sabbath**.
+
+## Development
+
+Run the automated tests with `pytest`:
+
+```bash
+pip install pytest
+pytest
 ```
 
 Contributions and ideas are welcome!
