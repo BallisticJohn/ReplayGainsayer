@@ -24,4 +24,23 @@ ReplayGainsayer helps music fans identify the best masters of their favorite mus
 3. **Cross-service comparison**
    - Present loudness information across services so listeners can choose the best master no matter where it is offered.
 
+## Installation
+
+Clone the repository and install dependencies using pip:
+
+```bash
+ git clone https://example.com/ReplayGainsayer.git
+ cd ReplayGainsayer
+ pip install -r requirements.txt
+```
+
+## Usage
+
+Run the tool with an artist name to see loudness information:
+
+```bash
+ python -m replaygainsayer --artist "Artist Name"
+```
+
+
 Contributions and ideas are welcome!
