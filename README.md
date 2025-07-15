@@ -11,6 +11,10 @@ ReplayGainsayer helps music fans identify the best masters of their favorite mus
    - **Yellow**: heavily compressed (–11 to –6 dBFS)
    - **Green**: healthy dynamics (< –11 dBFS)
 
+Eventually, ReplayGainsayer may help fans to discover the best masters across streaming platforms and choose to listen to better music.
+
+## Development
+
 ## Staged development plan
 
 1. **Spotify prototype**
@@ -41,6 +45,5 @@ Run the tool with an artist name to see loudness information:
 ```bash
  python -m replaygainsayer --artist "Artist Name"
 ```
-
 
 Contributions and ideas are welcome!
